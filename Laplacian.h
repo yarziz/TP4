@@ -1,0 +1,25 @@
+#ifndef _LAPLACIAN_H
+
+#include <string>
+#include "Dense"
+#include "Sparse"
+#include "Function.h"
+
+class Laplacian
+{
+private:
+	Function* _fct;
+	DataFile* _df;
+	Eigen::VectorXd _sol;
+
+public:
+	// Constructeur
+	Laplacian(Function* function, DataFile* data_file);
+	InitialCondition();
+	BuildLaplacianMatrix();
+	BuildSourceTerm(double t);
+
+};
+
+#define _LAPLACIAN_H
+#endif
