@@ -1,0 +1,6 @@
+gdb laplacian
+run data.txt
+up
+
+
+print patati
